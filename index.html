@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>M. Bilal Pratama | Aspiring Web Developer</title>
+    <meta
+      name="description"
+      content="Portofolio M. Bilal Pratama, mahasiswa Sistem dan Teknologi Informasi yang membangun website modern dengan HTML, CSS, JavaScript, dan Supabase."
+    />
+    <meta name="author" content="M. Bilal Pratama" />
+    <meta name="theme-color" content="#050b1a" />
+    <meta
+      property="og:title"
+      content="M. Bilal Pratama | Aspiring Web Developer"
+    />
+    <meta
+      property="og:description"
+      content="Building Modern Websites and Digital Experiences."
+    />
+    <meta property="og:type" content="website" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%23050b1a'/%3E%3Ctext x='50' y='68' font-size='54' text-anchor='middle' fill='%2338bdf8' font-family='sans-serif' font-weight='700'%3EB%3C/text%3E%3C/svg%3E"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- EmailJS SDK -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("gHevRhrtvWAc7xXd4");
+      })();
+    </script>
+  </head>
+  <body>
+    <div class="progress" id="progress" aria-hidden="true"></div>
+    <div class="cursor-dot" id="dot" aria-hidden="true"></div>
+    <div class="cursor-ring" id="ring" aria-hidden="true"></div>
+    <a class="skip" href="#main">Langsung ke konten</a>
+
+    <header class="nav" id="nav">
+      <div class="wrap nav-in">
+        <a href="#home" class="logo" aria-label="Beranda"
+          >Bilal<span>Portofolio.</span></a
+        >
+        <button
+          class="burger"
+          id="burger"
+          aria-label="Buka menu"
+          aria-expanded="false"
+          aria-controls="menu"
+        >
+          <span></span><span></span><span></span>
+        </button>
+        <nav id="menu" class="menu" aria-label="Navigasi utama">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#project">Project</a>
+          <a href="#education">Education</a>
+          <a href="#journey">Journey</a>
+          <a href="#contact" class="menu-cta">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- HERO -->
+      <section id="home" class="hero">
+        <div class="aurora" aria-hidden="true"><i></i><i></i></div>
+        <canvas id="fx" aria-hidden="true"></canvas>
+        <div class="wrap hero-grid">
+          <div class="hero-text">
+            <p class="hello">Hi, I'm M. Bilal Pratama</p>
+            <h1>
+              Aspiring Web Developer <span class="grad">&amp; IT Student</span>
+            </h1>
+            <p
+              class="role"
+              aria-label="Frontend Developer, Web Developer, Creative Developer"
+            >
+              <span id="role" aria-hidden="true">Frontend Developer</span
+              ><span class="caret" aria-hidden="true"></span>
+            </p>
+            <p class="tagline">
+              Building Modern Websites and Digital Experiences.
+            </p>
+            <p class="lead">
+              "Mahasiswa Sistem dan Teknologi Informasi yang lagi asyik
+              mendalami dunia web development. Suka banget ngoprek frontend,
+              bikin tampilan web yang rapi, plus menghubungkan database buat
+              proyek-proyek seru. Masih terus belajar dan selalu terbuka buat
+              kolaborasi bareng!"
+            </p>
+            <div class="btns">
+              <a href="#project" class="btn primary">View My Projects</a>
+              <a
+                href="assets/CV-M-Bilal-Pratama.pdf"
+                class="btn ghost"
+                id="cvBtn"
+                download
+                >Download CV</a
+              >
+              <a href="#contact" class="btn ghost">Contact Me</a>
+            </div>
+          </div>
+
+          <div class="hero-visual" aria-hidden="true">
+            <div class="win">
+              <div class="win-bar">
+                <i></i><i></i><i></i><span>kokorblx/index.html</span>
+              </div>
+              <pre
+                class="code"
+              ><code id="typed"></code><span class="caret"></span></pre>
+            </div>
+            <div class="chip c1">Supabase</div>
+            <div class="chip c2">EmailJS</div>
+            <div class="chip c3">Telegram Bot</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about" class="sec">
+        <div class="wrap split">
+          <div>
+            <h2>About me</h2>
+            <div class="avatar">
+              <img
+                src="assets/profile.jpeg"
+                alt="Foto profil M. Bilal Pratama"
+              />
+            </div>
+          </div>
+          <div class="prose reveal">
+            <p>
+              "Saya mahasiswa semester 3 Program Studi Sistem dan Teknologi
+              Informasi Fakultas Teknik dan Ilmu Komputer yang punya
+              ketertarikan besar di dunia web development."
+            </p>
+            <p>
+              "Salah satu proyek yang saya kembangkan adalah
+              <strong>KokoRBLX</strong>, sebuah website marketplace bertema
+              Roblox. Proyek ini jadi tempat eksplorasi saya dalam membangun
+              antarmuka web, mengintegrasikan Supabase sebagai database,
+              menghubungkan notifikasi pesanan ke Telegram Bot, serta mengirim
+              email otomatis pakai EmailJS yang dipublikasikan lewat Vercel."
+            </p>
+            <p>
+              "Saya terus mengasah keterampilan lewat proyek mandiri dan
+              memanfaatkan AI sebagai assistant coding untuk memahami struktur
+              kode serta alur integrasi fitur dengan lebih dalam. Saat ini, saya
+              terbuka untuk kesempatan berkembang sebagai Junior Web Developer
+              atau Frontend Developer."
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SKILLS -->
+      <section id="skills" class="sec alt">
+        <div class="wrap">
+          <h2>Skills</h2>
+          <p class="sub">Teknologi yang saya gunakan dalam proyek saya.</p>
+          <div class="grid skills reveal">
+            <article class="card">
+              <h3>HTML</h3>
+              <p>Struktur halaman yang semantik dan mudah diakses.</p>
+            </article>
+            <article class="card">
+              <h3>CSS</h3>
+              <p>Layout, animasi, dan tampilan yang rapi.</p>
+            </article>
+            <article class="card">
+              <h3>JavaScript</h3>
+              <p>Interaksi dan logika di sisi browser.</p>
+            </article>
+            <article class="card">
+              <h3>Responsive Web Design</h3>
+              <p>Tampilan nyaman di desktop, tablet, dan ponsel.</p>
+            </article>
+            <article class="card">
+              <h3>UI Design</h3>
+              <p>Menyusun antarmuka yang jelas dan konsisten.</p>
+            </article>
+            <article class="card">
+              <h3>Supabase</h3>
+              <p>Database untuk produk dan pesanan.</p>
+            </article>
+            <article class="card">
+              <h3>EmailJS</h3>
+              <p>Email otomatis kepada pembeli setelah pesanan selesai.</p>
+            </article>
+            <article class="card">
+              <h3>Git &amp; GitHub</h3>
+              <p>Version control dan penyimpanan repositori.</p>
+            </article>
+            <article class="card">
+              <h3>Deployment di Vercel</h3>
+              <p>Mempublikasikan website agar bisa diakses online.</p>
+            </article>
+            <article class="card">
+              <h3>Bot Telegram</h3>
+              <p>Notifikasi otomatis ketika pesanan masuk.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJECT -->
+      <section id="project" class="sec">
+        <div class="wrap">
+          <h2>Featured project</h2>
+          <article class="project reveal">
+            <div class="shot" aria-hidden="true">
+              <div class="shot-bar"><i></i><i></i><i></i></div>
+              <div class="shot-body">
+                <div class="s-hero"></div>
+                <div class="s-row">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
+              </div>
+              <a
+                class="shot-ov"
+                href="https://koko-rbx.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                tabindex="-1"
+                aria-hidden="true"
+                ><span>Buka Live Demo</span></a
+              >
+            </div>
+            <div class="p-info">
+              <p class="cat">Roblox Marketplace Website</p>
+              <h3>KokoRBLX</h3>
+              <p>
+                Website marketplace bertema Roblox yang dikembangkan sebagai
+                proyek mandiri untuk mempelajari pengembangan website,
+                pengelolaan produk, dan alur pemesanan.
+              </p>
+              <ul class="ticks">
+                <li>Katalog produk dan alur pemesanan</li>
+                <li>Pengelolaan database dengan Supabase</li>
+                <li>Notifikasi pesanan ke Telegram saat pesanan masuk</li>
+                <li>
+                  Email otomatis kepada pembeli lewat EmailJS setelah pesanan
+                  selesai
+                </li>
+                <li>
+                  Admin panel dengan login untuk mengelola produk dan pesanan
+                </li>
+                <li>Dipublikasikan melalui Vercel</li>
+              </ul>
+              <div class="tags">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span
+                ><span>Supabase</span><span>EmailJS</span
+                ><span>Telegram Bot</span><span>Vercel</span
+                ><span>Dan lain-lain</span>
+              </div>
+              <div class="btns">
+                <a
+                  class="btn primary"
+                  href="https://koko-rbx.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Live Demo</a
+                >
+                <a
+                  class="btn ghost"
+                  href="https://github.com/kokorobuxx-stack/kokorobx"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >GitHub</a
+                >
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- EDUCATION -->
+      <section id="education" class="sec alt">
+        <div class="wrap">
+          <h2>Education</h2>
+          <article class="edu reveal">
+            <div class="edu-icon" aria-hidden="true">🎓</div>
+            <div>
+              <h3>Sistem dan Teknologi Informasi</h3>
+              <p>
+                Universitas Muhammadiyah Kotabumi · Fakultas Teknik dan Ilmu
+                Komputer
+              </p>
+              <p class="muted">2025 - Present · Semester 3 (Sedang Berjalan)</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- JOURNEY -->
+      <section id="journey" class="sec">
+        <div class="wrap">
+          <h2>Learning journey</h2>
+          <p class="sub">Area yang sedang saya kembangkan.</p>
+          <ol class="timeline reveal">
+            <li>
+              <h3>Frontend Development</h3>
+              <p>
+                Memperdalam HTML, CSS, dan JavaScript lewat membangun website
+                nyata.
+              </p>
+            </li>
+            <li>
+              <h3>UI/UX Design</h3>
+              <p>Belajar menyusun tampilan yang jelas dan mudah dipakai.</p>
+            </li>
+            <li>
+              <h3>Database Integration</h3>
+              <p>
+                Menghubungkan website dengan Supabase, bot Telegram, dan EmailJS
+                untuk data dan notifikasi pesanan.
+              </p>
+            </li>
+            <li>
+              <h3>Website Deployment</h3>
+              <p>Mempublikasikan proyek dengan GitHub dan Vercel.</p>
+            </li>
+            <li>
+              <h3>AI-Assisted Development</h3>
+              <p>
+                Memakai AI untuk mempercepat pengembangan sambil mempelajari
+                kode yang dihasilkan.
+              </p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="sec alt">
+        <div class="wrap split">
+          <div>
+            <h2>Contact</h2>
+            <p class="sub">
+              Terbuka untuk peluang sebagai Junior Web Developer atau Frontend
+              Developer.
+            </p>
+            <ul class="links">
+              <li>
+                <a href="mailto:kokorobuxx@gmail.com">kokorobuxx@gmail.com</a>
+              </li>
+              <li>
+                <a
+                  href="https://github.com/kokorobuxx-stack"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >github.com/kokorobuxx-stack</a
+                >
+              </li>
+            </ul>
+            <a
+              class="btn primary"
+              href="mailto:kokorobuxx@gmail.com?subject=Peluang%20Web%20Developer"
+              >Email Saya</a
+            >
+          </div>
+
+          <form id="contact-form" class="form" novalidate>
+            <div class="field">
+              <label for="name">Nama</label>
+              <input
+                id="name"
+                name="name"
+                type="text"
+                autocomplete="name"
+                required
+              />
+              <small class="err" id="e-name"></small>
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                autocomplete="email"
+                required
+              />
+              <small class="err" id="e-email"></small>
+            </div>
+            <div class="field">
+              <label for="msg">Pesan</label>
+              <textarea id="msg" name="message" rows="5" required></textarea>
+              <small class="err" id="e-msg"></small>
+            </div>
+            <button class="btn primary" type="submit" id="button">
+              Kirim pesan
+            </button>
+            <p class="note" id="note" role="status" aria-live="polite">
+              Pesan akan langsung terkirim ke email saya via EmailJS.
+            </p>
+            </p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="wrap">
+        <p>
+          · Junior Web Developer yang memanfaatkan AI assistant untuk 
+          belajar dan membangun website modern ·
+        </p>
+        <p class="muted">© <span id="year">2026</span> M. Bilal Pratama</p>
+      </div>
+    </footer>
+
+    <button class="top" id="top" aria-label="Kembali ke atas">↑</button>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
