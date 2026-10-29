@@ -42,6 +42,7 @@
       })();
     </script>
   </head>
+
   <body>
     <div class="progress" id="progress" aria-hidden="true"></div>
     <div class="cursor-dot" id="dot" aria-hidden="true"></div>
@@ -111,6 +112,9 @@
                 download
                 >Download CV</a
               >
+              <button type="button" class="btn" data-open-cv>
+                 View My CV ↗
+                </button>
               <a href="#contact" class="btn ghost">Contact Me</a>
             </div>
           </div>
@@ -429,6 +433,35 @@
 
     <button class="top" id="top" aria-label="Kembali ke atas">↑</button>
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
-    <script src="script.js"></script>
+
+     <!-- CV POPUP -->
+<div class="cv-modal" id="cvModal" aria-hidden="true">
+  <div class="cv-backdrop" data-close-cv></div>
+
+  <div class="cv-modal-window"
+       role="dialog"
+       aria-modal="true"
+       aria-label="Curriculum Vitae">
+
+    <div class="cv-modal-header">
+      <span>M. BILAL PRATAMA — CURRICULUM VITAE</span>
+
+      <button type="button"
+              class="cv-close"
+              id="closeCV"
+              aria-label="Tutup CV">
+        &times;
+      </button>
+    </div>
+
+    <iframe
+      id="cvFrame"
+      title="Website CV M. Bilal Pratama">
+    </iframe>
+
+  </div>
+</div>
+
+<script src="script.js"></script>
   </body>
 </html>

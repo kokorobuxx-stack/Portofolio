@@ -598,3 +598,59 @@ if (contactForm) {
       });
   });
 }
+
+/* ===== CV POPUP ===== */
+(() => {
+  const modal = document.getElementById("cvModal");
+  const closeButton = document.getElementById("closeCV");
+  const frame = document.getElementById("cvFrame");
+
+  if (!modal || !closeButton || !frame) return;
+
+  // GANTI dengan URL website CV kamu di Vercel.
+  const CV_URL = "https://kokorobuxx-stack.github.io/View-my-cv/";
+
+  let previousFocus = null;
+
+  function openCV() {
+    previousFocus = document.activeElement;
+
+    if (!frame.src || frame.src === window.location.href) {
+      frame.src = CV_URL;
+    }
+
+    modal.classList.add("active");
+    modal.setAttribute("aria-hidden", "false");
+    document.body.classList.add("cv-modal-open");
+
+    closeButton.focus();
+  }
+
+  function closeCV() {
+    modal.classList.remove("active");
+    modal.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("cv-modal-open");
+
+    if (previousFocus) previousFocus.focus();
+  }
+
+  // Bisa dipanggil oleh tombol mana pun yang memakai data-open-cv.
+  document.querySelectorAll("[data-open-cv]").forEach(button => {
+    button.addEventListener("click", openCV);
+  });
+
+  closeButton.addEventListener("click", closeCV);
+
+  modal.querySelectorAll("[data-close-cv]").forEach(element => {
+    element.addEventListener("click", closeCV);
+  });
+
+  document.addEventListener("keydown", event => {
+    if (
+      event.key === "Escape" &&
+      modal.classList.contains("active")
+    ) {
+      closeCV();
+    }
+  });
+})();
